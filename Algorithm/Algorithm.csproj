@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DBC055D2-D68A-434D-BD39-F42D050FC673}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Algorithm</RootNamespace>
+    <AssemblyName>Algorithm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="B_Constructor.cs" />
+    <Compile Include="B_FieldInitializer.cs" />
+    <Compile Include="B_String.cs" />
+    <Compile Include="B_ValueType.cs" />
+    <Compile Include="E07_Use2StacksForQueue.cs" />
+    <Compile Include="E04_ReplaceSpaceInString.cs" />
+    <Compile Include="E05_PrintListFromEnd.cs" />
+    <Compile Include="E06_BuildBinaryTree.cs" />
+    <Compile Include="E08_MinNumberInRotatedArray.cs" />
+    <Compile Include="E09_Fibonacci.cs" />
+    <Compile Include="E10_NumOf1InBinary.cs" />
+    <Compile Include="E11_Power.cs" />
+    <Compile Include="E12_Print1ToMaxOfNDigits.cs" />
+    <Compile Include="E13_DeleteNodeInList.cs" />
+    <Compile Include="E14_ReorderArray.cs" />
+    <Compile Include="E15_KthNodeFromEnd.cs" />
+    <Compile Include="E16_ReverseList.cs" />
+    <Compile Include="E17_MergeSortedLists.cs" />
+    <Compile Include="E18_SubstructureInTree.cs" />
+    <Compile Include="E19_MirrorOfBinaryTree.cs" />
+    <Compile Include="E20_PrintMatrix.cs" />
+    <Compile Include="E21_MinInStack.cs" />
+    <Compile Include="E22_StackPushPopOrder.cs" />
+    <Compile Include="E23_PrintBinaryTreeByLevel.cs" />
+    <Compile Include="E24_SquenceOfBST.cs" />
+    <Compile Include="E25_PathInTree.cs" />
+    <Compile Include="E26_CopyComplexList.cs" />
+    <Compile Include="E27_ConvertBinarySearchTree.cs" />
+    <Compile Include="E28_2_StringCombination.cs" />
+    <Compile Include="E28_StringPermutation.cs" />
+    <Compile Include="E29_MoreThanHalfNumber.cs" />
+    <Compile Include="E30_KLeastNumbers.cs" />
+    <Compile Include="E31_GreatestSumOfSubarrays.cs" />
+    <Compile Include="E32_NumberOf1.cs" />
+    <Compile Include="E33_SortArrayForMinNumber.cs" />
+    <Compile Include="E34_UglyNumber.cs" />
+    <Compile Include="E35_FirstNotRepeatingChar.cs" />
+    <Compile Include="E36_InversePairs.cs" />
+    <Compile Include="E37_FirstCommonNodesInLists.cs" />
+    <Compile Include="E38_NumberOfK.cs" />
+    <Compile Include="E39_1_TreeDepth.cs" />
+    <Compile Include="E39_2_BalancedBinaryTree.cs" />
+    <Compile Include="E40_NumbersAppearOnce.cs" />
+    <Compile Include="E41_1_TwoNumbersWithSum.cs" />
+    <Compile Include="E41_2_ContinueSequenceWithSum.cs" />
+    <Compile Include="E42_1_ReverseWordsInSequence.cs" />
+    <Compile Include="E42_2_LeftRotateString.cs" />
+    <Compile Include="E43_DicesProbability.cs" />
+    <Compile Include="E44_ContinuousCards.cs" />
+    <Compile Include="E45_LastNumberInCircle.cs" />
+    <Compile Include="E46_Accumulate.cs" />
+    <Compile Include="E47_AddTwoNumbers.cs" />
+    <Compile Include="E48_SealedClass.cs" />
+    <Compile Include="E49_StrToInt.cs" />
+    <Compile Include="Ex01_MaxDiff.cs" />
+    <Compile Include="Ex02_ReverseStack.cs" />
+    <Compile Include="Ex03_DeleteCharsInString.cs" />
+    <Compile Include="Search_Binary.cs" />
+    <Compile Include="Sort_Bubble.cs" />
+    <Compile Include="Sort_Insertion.cs" />
+    <Compile Include="Sort_MaxHeapSort.cs" />
+    <Compile Include="B_Memory.cs" />
+    <Compile Include="Sort_MergeSort.cs" />
+    <Compile Include="Sort_QuickSort.cs" />
+    <Compile Include="E01_CSharpAppDomain.cs" />
+    <Compile Include="E01_CSharpInitialize.cs" />
+    <Compile Include="E02_Singleton.cs" />
+    <Compile Include="E03_FindNumberIn2DArray.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sort_QuickSortByPartition.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="_Sandbox.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
