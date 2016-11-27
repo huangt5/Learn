@@ -1,0 +1,72 @@
+﻿@model MVC4Practice.Models.EditSalesOrderViewModel
+@{
+    ViewBag.Title = "Knockout_jqGridBinding";
+}
+@section scripts
+{
+    <script type="text/javascript"> </script>
+
+    <script src="../../Scripts/MVC4Practice.UI/FormGrid.js"></script>
+    <script src="../../Scripts/jquery.jqGrid.js"></script>
+    <script src="../../Scripts/knockout-2.2.1.js"></script>
+    <script src="../../Scripts/ko.gridBinding.js"></script>
+    
+    <script type="text/javascript">
+        $(function() {
+            var detailsData = @Html.Raw(Json.Encode(Model.OrderDetails))
+
+            var viewModel = {
+                orderDetails: ko.observableArray([]),
+                pager: { target: '#pager', rowNum: 30, rowList: [10, 20, 50] }
+            };
+
+            viewModel.orderDetails(detailsData);
+
+            ko.applyBindings(viewModel);
+
+            //$("#list").jqGrid({
+            //    rowNum: 20,
+            //});
+
+            jQuery.extend(jQuery.jgrid.defaults, { rowNum: 5 });
+            $("#list").trigger("reloadGrid");
+            //$.jgrid = {
+            //    defaults: {
+            //        rowNum: 20,
+            //    },
+            //};
+
+        });
+    </script>
+}
+
+<h2>Knockout_jqGridBinding</h2>
+
+<table id="list" data-bind="grid: { data: orderDetails}, defaults:{rowNum:20}" >
+    <caption>Sales Order Details</caption>
+    <thead> 
+        <tr> 
+            <th data-field="actions" style="width:50px;"></th>
+            <th data-field="productId" width="150px">Product Id</th> 
+            <th data-field="specialOfferId">Special Offer Id</th> 
+            <th data-field="price">Price</th> 
+            <th data-field="qty">Qty</th> 
+        </tr> 
+    </thead> 
+    <tbody>
+        <tr>
+            <td data-field="actions">
+                <a data-bind="attr:{ href: 'order/' + productId, title: productId }, text: productId"></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+@*<div id="pager"></div>*@
+
+@* 
+Known issue (2013-04-24):
+pager not working
+Don't know how to change grid option, like rowNum. The only way is to update src of ko.gridBinding.js directly.
+ko.gridBinding doesn't support edit feature in jqGrid so far.
+ *@

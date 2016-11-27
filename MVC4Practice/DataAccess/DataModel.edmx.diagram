@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6d480601b8ca425d9a30a6c3879d5eed" Name="Diagram1">
+        <EntityTypeShape EntityType="AdventureWorks2008R2Model.Customer" Width="1.5" PointX="0.625" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorks2008R2Model.SalesOrderDetail" Width="1.75" PointX="5.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="AdventureWorks2008R2Model.SalesOrderHeader" Width="1.75" PointX="3" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="AdventureWorks2008R2Model.FK_SalesOrderHeader_Customer_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="AdventureWorks2008R2Model.FK_SalesOrderDetail_SalesOrderHeader_SalesOrderID" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AdventureWorks2008R2Model.Product" Width="1.5" PointX="5.875" PointY="9" />
+        <EntityTypeShape EntityType="AdventureWorks2008R2Model.SpecialOffer" Width="1.5" PointX="3.125" PointY="7.25" />
+        <EntityTypeShape EntityType="AdventureWorks2008R2Model.SpecialOfferProduct" Width="1.5" PointX="5.875" PointY="6" />
+        <AssociationConnector Association="AdventureWorks2008R2Model.FK_SpecialOfferProduct_Product_ProductID" />
+        <AssociationConnector Association="AdventureWorks2008R2Model.FK_SalesOrderDetail_SpecialOfferProduct_SpecialOfferIDProductID" />
+        <AssociationConnector Association="AdventureWorks2008R2Model.FK_SpecialOfferProduct_SpecialOffer_SpecialOfferID" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

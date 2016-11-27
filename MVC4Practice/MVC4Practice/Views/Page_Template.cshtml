@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Page_Template";
+}
+@section scripts
+{
+    @Scripts.Render("~/bundles/mvc4practice/editform")
+    @* Include specific page scripts file *@
+    @*<script src="../../Scripts/Pages/EditSalesOrder.js"></script>*@
+}
+
+<h2>Page_Template</h2>
+
+@* form grid template *@
+<div class="formGrid">
+    @*row template*@
+    <div class="row">
+        <div class="leftCol">
+            <div class="label"></div>
+            <div class="control">@Html.TextBoxFor(m => m.SO)</div>
+        </div>
+        <div class="rightCol">
+            <div class="label"></div>
+            @*date picker*@
+            <div class="control date">@Html.TextBoxFor(m => m.SO)</div>
+        </div>
+    </div>
+    @* button row template *@
+    <div class="btnRow">
+        <input type="button" value="Button"/>
+        @* Hyperlink *@
+        @Html.ActionLink("Link", "Action")
+        @* Submit button *@
+        <input type="submit" value="Save" />
+    </div>
+</div>

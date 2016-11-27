@@ -1,0 +1,67 @@
+﻿.formGrid {
+    
+}
+
+.formGrid .row {
+    height: 50px;
+    line-height: 50px;/* align inner controls to middle vertically*/
+}
+
+.formGrid .row .leftCol {
+    float: left;
+    width: 48%
+}
+
+.formGrid .row .rightCol {
+    float: right;
+    width: 48%
+}
+
+.formGrid .row .label {
+    float: left;
+    width: 120px
+}
+
+.formGrid .row .control {
+    float: left;
+}
+
+.formGrid .btnRow {
+    height: 50px
+}
+
+/*shared styles*/
+.formGrid .btnRow input[type="submit"],
+.formGrid .btnRow input[type="button"] {
+    float: right;
+    text-align: center;
+    width: 86px; /*width here includes content and padding*/
+    height: 40px;
+    margin-left: 8px;
+    margin-right: 0px
+}
+
+.formGrid .btnRow a {
+    float: right;
+    background-color: #D3DCE0;
+    border: 1px solid #787878;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 7px;
+    margin-right: 8px;
+    width: 70px; /*width here specify content only for hyperlink*/
+    text-decoration: none; /*remove underscore of link*/
+    height: 24px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 6px;
+    margin-left: 8px;
+    margin-right: 0px
+}
+
+/*style for named tag*/
+#statusBar {
+    float: right;
+    margin-right: 120px;
+    /*display: none*/
+}

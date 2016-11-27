@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Sales Order List";
+}
+@section scripts
+{
+    @Scripts.Render("~/bundles/mvc4practice/listform")
+    <script type="text/javascript" src="../../Scripts/Pages/SalesOrderList.js"></script>
+    @*<script type="text/javascript" src="../../Scripts/jquery.jqGrid.min.js"></script>*@
+}
+<h2>Sales Order List</h2>
+
+<div class="formGrid">
+    <div class="row">
+        <div class="leftCol">
+            <div class="label">Order Date from</div>
+            <div class="control date"><input type="text" id="txtFrom" value="2012-01-01"/></div>
+        </div>
+        <div class="rightCol">
+            <div class="label">to</div>
+            <div class="control date"><input type="text" id="txtTo" value="@DateTime.Now.ToString("yyyy-MM-dd")"/></div>
+        </div>
+    </div>
+    <div class="btnRow">
+        <input type="button" value="Query" id="btnQuery"/>
+    </div>
+</div>
+
+<table id="list"></table>
+<div id="pager"></div>

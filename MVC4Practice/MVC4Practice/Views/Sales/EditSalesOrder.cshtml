@@ -1,0 +1,79 @@
+﻿@model MVC4Practice.Models.EditSalesOrderViewModel
+@{
+    ViewBag.Title = "Create Sales Order";
+}
+@section scripts
+{
+    @if (Model.IsEdit)
+    {
+        // Generate local json details data for edit grid
+        // Avoid to use a separate action for ajax call
+        <script type="text/javascript">
+            var detailsData = @Html.Raw(Json.Encode(Model.SODetails))
+        </script>
+    }
+    @Scripts.Render("~/bundles/mvc4practice/editform")
+    <script src="../../Scripts/Pages/EditSalesOrder.js"></script>
+}
+@using (Html.BeginForm("SaveSalesOrder", "Sales"))
+{
+    @Html.HiddenFor(m => m.SO.SalesOrderID)
+    <div class="formGrid">
+        <div class="row">
+            <div class="leftCol">
+                <div class="label">Order Date</div>
+                <div class="control date">@Html.TextBoxFor(m => m.SO.OrderDate, "{0:yyyy-MM-dd}")</div>
+            </div>
+            <div class="rightCol">
+                <div class="label">Account Number</div>
+                <div class="control">@Html.TextBoxFor(m => m.SO.AccountNumber)</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="leftCol">
+                <div class="label">Due Date</div>
+                <div class="control date">@Html.TextBoxFor(m => m.SO.DueDate, "{0:yyyy-MM-dd}")</div>
+            </div>
+            <div class="rightCol">
+                <div class="label">Ship Date</div>
+                <div class="control date">@Html.TextBoxFor(m => m.SO.ShipDate, "{0:yyyy-MM-dd}")</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="leftCol">
+                <div class="label">Customer</div>
+                <div class="control">@Html.TextBoxFor(m => m.SO.CustomerID)</div>
+            </div>
+            <div class="rightCol">
+                <div class="label">Online Order</div>
+                <div class="control">@Html.CheckBoxFor(m => m.SO.OnlineOrderFlag)</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="leftCol">
+                <div class="label">Shipto Address</div>
+                <div class="control">@Html.TextBoxFor(m => m.SO.ShipToAddressID)</div>
+            </div>
+            <div class="rightCol">
+                <div class="label">Billing Address</div>
+                <div class="control">@Html.TextBoxFor(m => m.SO.BillToAddressID)</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="leftCol">
+                <div class="label">Ship Method</div>
+                <div class="control">@Html.TextBoxFor(m => m.SO.ShipMethodID)</div>
+            </div>
+        </div>
+        <div>
+            <table id="list"></table>
+        </div>
+        <div class="btnRow">
+            <input type="button" value="Help"/>
+            @Html.ActionLink("Cancel", "Index")
+            <input type="submit" value="Save"/>
+            <input type="button" value="Salesman" id="btnGetSalesman"/>
+        </div>
+    </div>
+    
+}

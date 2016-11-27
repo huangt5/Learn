@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Javascript Namespace";
+}
+
+
+@section scripts
+{
+    <script type="text/javascript">
+        var ui = MVC4Practice.console;
+        ui.log("This testing page for Javascript Namespace");
+
+        // define closure by IIFE(immediate invoke function expression)
+        (function () {
+            var a = 1;
+            privateFun(a);
+
+            function privateFun(p) {
+                ui.log(p);//1
+            }
+        })();
+
+        // Use IIFE define namespace
+        var IIFE = IIFE || {};
+        (function(ns) {
+            var a = 2;
+            ns.b = 3;
+            ns.show = function() {
+                ui.log(a);
+            };
+            
+        })(IIFE);
+
+        IIFE.show();//2
+        ui.log(IIFE.b);//3
+
+        // define a namespace by object literal notation
+        var OLN = {
+            a: 4,
+            show : function (){
+                ui.log(5);
+            },
+            utils: {
+                a: 6
+            }
+        };
+
+        OLN.show(); //5
+        ui.log(OLN.a); //4
+        ui.log(OLN.utils.a);//6
+        
+        // namespace injection
+        OLN.utils.c = 7;
+        ui.log(OLN.utils.c);//7
+        
+        OLN.utils.show = function() {
+            ui.log(8);
+        };
+        OLN.utils.show();//8
+
+        // prototyp
+        var classA = function(sn) {
+            var _sn = sn;
+            this.getSN = function() {
+                return _sn;
+            };
+        };
+        classA.prototype._staticSN = 100;
+
+        var i9 = new classA(9);
+        var i10 = new classA(10);
+        ui.log(i9.getSN());//9
+        ui.log(i10.getSN());//10
+        ui.log(i9._staticSN);//100
+        ui.log(i10._staticSN);//100
+    </script>
+}

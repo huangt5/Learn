@@ -1,0 +1,8 @@
+﻿@using System.Linq.Expressions
+
+
+@Html.LabelFor((Expression<Func<dynamic, dynamic>>)ViewBag["exp"], new { @class = "col-md-2 control-label" })
+<div class="col-md-3">
+    @Html.TextBoxFor((Expression<Func<dynamic, dynamic>>)ViewBag["exp"], new { @class = "form-control" })
+    @Html.ValidationMessageFor((Expression<Func<dynamic, dynamic>>)ViewBag["exp"])
+</div>
