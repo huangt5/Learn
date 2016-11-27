@@ -1,0 +1,58 @@
+﻿C# 5.0
+	CLR 4.5
+	.NET Framework 4.5
+	Visual Studio 2012
+	New Features:
+		Asynchronous methods
+		Caller info attributes
+
+C# 4.0
+	CLR 4.0
+	.NET Framework 4
+	Visual Studio 2010
+	New Features:
+		Dynamic binding
+		Named and optional arguments
+		Generic co- and contravariance
+		Embedded interop types ("NoPIA")
+
+C# 3.0
+	CLR 2.0 2.0SP1
+	.NET Framework 2.0 3.0 3.5
+	Visual Studio 2008 2010
+	New Features:
+		Implicitly typed local variables
+		Object and collection initializers
+		Auto-Implemented properties
+		Anonymous types
+		Extension methods
+		Query expressions
+		Lambda expressions
+		Expression trees
+		Partial Methods
+
+C# 2.0
+	CLR 2.0
+	.NET Framework 2.0
+	Visual Studio 2005
+	New Features:
+		Generics
+		Partial types
+		Anonymous methods
+		Iterators
+		Nullable types
+		Private setters (properties)
+		Method group conversions (delegates)
+		Covariance and Contra-variance
+		Static classes
+
+C# 1.2
+	CLR 1.1
+	.NET Framework 1.1
+	Visual Studio 2003
+
+C# 1.0
+	CLR 1.0
+	.NET Framework 1.0
+	Visual Studio 2002
+
